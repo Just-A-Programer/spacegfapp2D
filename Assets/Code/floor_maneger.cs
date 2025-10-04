@@ -1,9 +1,13 @@
+using TMPro;
 using UnityEngine;
 
 public class floor_maneger : MonoBehaviour
 {
     public int currfloor;
+    public TextMeshProUGUI text;
     GameObject[] floors = new GameObject[3];
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,6 +20,7 @@ public class floor_maneger : MonoBehaviour
     {
         if (currfloor < 2) { currfloor++; }
 
+        text.text = "Floor: " + (currfloor + 1);
 
         floors[0].SetActive(false);
         floors[1].SetActive(false);
@@ -26,6 +31,8 @@ public class floor_maneger : MonoBehaviour
     public void decreaseFloorHeight()
     {
         if (currfloor > 0) { currfloor--; }
+
+        text.text = "Floor: " + (currfloor + 1);
 
         floors[0].SetActive(false);
         floors[1].SetActive(false);
