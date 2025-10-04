@@ -33,7 +33,7 @@ public class draw : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse1)) { drawID = -1; }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && drawID != -1) { drawSS_mod(); }
+        if (Input.GetKey(KeyCode.Mouse0) && drawID != -1) { drawSS_mod(); }
     }
 
     void drawSS_mod()
