@@ -3,10 +3,12 @@ using UnityEngine;
 
 public class draw : MonoBehaviour
 {
+    public floor_maneger fm;
+
     public int drawID;
-    public int currFloor;
     public GameObject[] SS_floor = new GameObject[3];
     public GameObject[] SS_prefabs = new GameObject[1];
+    int currFloor;
     Vector2[] takenSpace0 = new Vector2[45];
     Vector2[] takenSpace1 = new Vector2[45];
     Vector2[] takenSpace2 = new Vector2[45];
@@ -27,6 +29,8 @@ public class draw : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currFloor = fm.currfloor;
+
         if (Input.GetKeyDown(KeyCode.Mouse1)) { drawID = -1; }
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && drawID != -1) { drawSS_mod(); }
