@@ -25,6 +25,8 @@ public class draw : MonoBehaviour
         Vector3 cursorPoss_temp = Camera.main.ScreenToWorldPoint(new Vector3(cursorclickPoss.x, cursorclickPoss.y, Camera.main.nearClipPlane));
         Vector2 cursorPoss = new Vector2(cursorPoss_temp.x, cursorPoss_temp.y);
 
+        Debug.Log(cursorPoss);
+
         GameObject new_mod = GameObject.Instantiate(SS_prefabs[drawID]);
         new_mod.transform.SetParent(SS_floor[currFloor].transform);
         new_mod.transform.position = new Vector3(Mathf.Floor(cursorPoss.x), Mathf.Floor(cursorPoss.y), 0);
