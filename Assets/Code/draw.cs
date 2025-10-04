@@ -2,12 +2,15 @@ using UnityEngine;
 
 public class draw : MonoBehaviour
 {
-    public int drawID = -1;
-    public uint currFloor;
-    public GameObject[] SS_floor;
-    public GameObject[] SS_prefabs;
+    public int drawID;
+    public int currFloor;
+    public GameObject[] SS_floor = new GameObject[3];
+    public GameObject[] SS_prefabs = new GameObject[1];
 
-
+    private void Start()
+    {
+        drawID = -1;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -25,7 +28,7 @@ public class draw : MonoBehaviour
         GameObject new_mod = GameObject.Instantiate(SS_prefabs[drawID]);
         new_mod.transform.SetParent(SS_floor[currFloor].transform);
         new_mod.transform.position = new Vector3(Mathf.Floor(cursorPoss.x), Mathf.Floor(cursorPoss.y), 0);
-
+        
     }
 
     public void SetDrawID(int ID)

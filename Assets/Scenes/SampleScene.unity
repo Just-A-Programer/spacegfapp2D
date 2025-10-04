@@ -831,11 +831,11 @@ MonoBehaviour:
   drawID: 0
   currFloor: 0
   SS_floor:
-  - {fileID: 1532626697}
-  - {fileID: 1693085785}
-  - {fileID: 368850297}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   SS_prefabs:
-  - {fileID: 6475235800945743260, guid: f7f23544aaedf8f40bad0af76683ace5, type: 3}
+  - {fileID: 0}
 --- !u!1 &1663191215
 GameObject:
   m_ObjectHideFlags: 0
