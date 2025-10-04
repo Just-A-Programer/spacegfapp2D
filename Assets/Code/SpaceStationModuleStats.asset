@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: SpaceStationModuleStats
   m_EditorClassIdentifier: 
   NumberOfModules: 3
-  TotalMass: 0
+  TotalMass: 9338
   TotalMaxMass: 66000
-  TotalBuildTime: 100
-  TotalChanceOFSucsess: 0
-  TotalPowerProduction: 0
-  TotalPowerConsumption: 0
+  TotalBuildTime: 1
+  TotalMorale: 5.13
+  TotalChanceOFSucsess: 76.3
+  TotalPowerProduction: 1335.82
+  TotalPowerConsumption: 0.76
   TotalBudget: 100000
-  TotalCost: 0
+  TotalCost: 20332
   ModuleName:
   - Power
   - Medbay
