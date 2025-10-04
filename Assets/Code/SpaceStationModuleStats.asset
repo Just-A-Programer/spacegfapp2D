@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: SpaceStationModuleStats
   m_EditorClassIdentifier: 
   NumberOfModules: 3
+  TotalMass: 0
+  TotalMaxMass: 66000
   TotalBuildTime: 100
   TotalChanceOFSucsess: 0
   TotalPowerProduction: 0
