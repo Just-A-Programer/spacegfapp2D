@@ -2,13 +2,19 @@ using UnityEngine;
 
 public class SScursor : MonoBehaviour
 {
+    public SpaceStationModuleStats SSMS;
+
     public draw d;
-    public Sprite[] SSmodSprites;
+    Sprite[] SSmodSprites;
     public Transform cursorGB;
     public SpriteRenderer curserSprite;
     public Vector2 offset;
     int drawID;
 
+    private void Start()
+    {
+        SSmodSprites = SSMS.ModuleSprite;
+    }
     // Update is called once per frame
     void Update()
     {

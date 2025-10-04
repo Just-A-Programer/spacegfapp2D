@@ -3,11 +3,14 @@ using UnityEngine;
 
 public class draw : MonoBehaviour
 {
+    public SpaceStationModuleStats SSMS;
+
     public floor_maneger fm;
+    public StationSim SSim;
 
     public int drawID;
     public GameObject[] SS_floor = new GameObject[3];
-    public GameObject[] SS_prefabs = new GameObject[1];
+    GameObject[] SS_prefabs;
     int currFloor;
     Vector2[] takenSpace0 = new Vector2[45];
     Vector2[] takenSpace1 = new Vector2[45];
@@ -16,6 +19,8 @@ public class draw : MonoBehaviour
 
     private void Start()
     {
+        SS_prefabs = SSMS.ModulePrefab;
+        
         drawID = -1;
 
         takenIndex[0] = 1;
@@ -88,8 +93,6 @@ public class draw : MonoBehaviour
 
 
         new_mod.transform.position = new Vector3(new_pos.x, new_pos.y, 0);
-        
-        
     }
 
     public void SetDrawID(int ID)
