@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ce51530a63693044b4ddbc8821d1351, type: 3}
   m_Name: SpaceStationModuleStats
   m_EditorClassIdentifier: 
-  NumberOfModules: 3
+  NumberOfModules: 19
   TotalMass: 9338
   TotalMaxMass: 66000
   TotalBuildTime: 1
@@ -24,23 +24,103 @@ MonoBehaviour:
   TotalCost: 20332
   ModuleName:
   - Power
-  - Medbay
-  - Beds
-  ModulePrice: e803000088130000391b0000
-  ModuleMass: 640000000a00000003000000
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  ModulePrice: e8030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  ModuleMass: 64000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   ModuleMorale:
   - -10
-  - 5
-  - 10
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   ModulePowerConsumption:
   - -1000
-  - 60
-  - 45
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   ModuleSprite:
   - {fileID: 21300000, guid: 499fb2913cda04242b5495c7b0b684c2, type: 3}
-  - {fileID: 21300000, guid: 8cdd5a93f4ca9a544bd402786c6673e7, type: 3}
-  - {fileID: 21300000, guid: 1e86ce5074fa90d4a808d24007e27175, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   ModulePrefab:
   - {fileID: 6475235800945743260, guid: f7f23544aaedf8f40bad0af76683ace5, type: 3}
-  - {fileID: 7320713638532393022, guid: 2641bf791d087414aa081f1a43193a00, type: 3}
-  - {fileID: 5899448879225735050, guid: e8c74d09d093d4041bc56ec072b28c29, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
