@@ -25,8 +25,19 @@ public class StationSim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //modulesum
-        SSMS.TotalModuleSum = 0;
+        if (Input.GetKeyDown(KeyCode.F11) && Screen.fullScreen)
+        {
+            Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+        }
+        else if (Input.GetKeyDown(KeyCode.F11) && !Screen.fullScreen)
+        {
+            Screen.fullScreenMode = FullScreenMode.Windowed;
+        }
+
+
+
+            //modulesum
+            SSMS.TotalModuleSum = 0;
         for (int i = 0; i < SSMS.NumberOfModules; i++)
         {
             SSMS.TotalModuleSum += SSMS.ModuleAmount[i];
