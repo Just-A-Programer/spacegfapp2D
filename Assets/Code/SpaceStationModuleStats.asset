@@ -12,115 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ce51530a63693044b4ddbc8821d1351, type: 3}
   m_Name: SpaceStationModuleStats
   m_EditorClassIdentifier: 
-  NumberOfModules: 19
+  NumberOfModules: 0
   TotalMass: 9338
   TotalMaxMass: 66000
-  TotalBuildTime: 1
+  TotalBuildTime: 300
   TotalMorale: 5.13
   TotalChanceOFSucsess: 76.3
-  TotalPowerProduction: 1335.82
-  TotalPowerConsumption: 0.76
-  TotalBudget: 100000
+  TotalBudget: 69695959
   TotalCost: 20332
-  ModuleName:
-  - Power
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  ModulePrice: e8030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  ModuleMass: 64000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  ModuleMorale:
-  - -10
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  ModulePowerConsumption:
-  - -1000
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  ModuleSprite:
-  - {fileID: 21300000, guid: 499fb2913cda04242b5495c7b0b684c2, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  ModulePrefab:
-  - {fileID: 6475235800945743260, guid: f7f23544aaedf8f40bad0af76683ace5, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  ModuleName: []
+  ModulePrice: 
+  ModuleMass: 
+  ModuleMorale: []
+  ModuleSprite: []
+  ModulePrefab: []
