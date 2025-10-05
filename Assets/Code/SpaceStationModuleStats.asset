@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ce51530a63693044b4ddbc8821d1351, type: 3}
   m_Name: SpaceStationModuleStats
   m_EditorClassIdentifier: 
-  NumberOfModules: 0
+  NumberOfModules: 19
   TotalMass: 9338
   TotalMaxMass: 66000
   TotalBuildTime: 300
@@ -20,9 +20,85 @@ MonoBehaviour:
   TotalChanceOFSucsess: 76.3
   TotalBudget: 69695959
   TotalCost: 20332
-  ModuleName: []
-  ModulePrice: 
-  ModuleMass: 
-  ModuleMorale: []
-  ModuleSprite: []
-  ModulePrefab: []
+  ModuleName:
+  - Mission Planning
+  - Moniter & Command
+  - Maintenence
+  - Logistics
+  - EVA Support
+  - Airlock Operations
+  - Food Storage
+  - Other Storage Spaces
+  - Waste Management
+  - WC
+  - Hygiene
+  - Medical Operations
+  - Exercise
+  - Socialization
+  - Meal Preparation
+  - Meal Consumption
+  - Relaxation Quarters
+  - Safe Haven
+  - Sleep
+  ModulePrice: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  ModuleMass: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  ModuleMorale:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  ModuleSprite:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  ModulePrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
