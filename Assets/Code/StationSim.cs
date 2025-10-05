@@ -14,6 +14,8 @@ public class StationSim : MonoBehaviour
 
     private void Start()
     {
+        Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+        
         for (int i = 0; i < SSMS.NumberOfModules; i++)
         {
             SSMS.ModuleAmount[i] = 0;
