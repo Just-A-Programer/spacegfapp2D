@@ -14,8 +14,7 @@ public class StationSim : MonoBehaviour
 
     private void Start()
     {
-        Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
-        
+        Screen.SetResolution(1920, 1080, true);
         for (int i = 0; i < SSMS.NumberOfModules; i++)
         {
             SSMS.ModuleAmount[i] = 0;
@@ -25,13 +24,9 @@ public class StationSim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F11) && Screen.fullScreen)
+        if (Input.GetKeyDown(KeyCode.F11))
         {
-            Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
-        }
-        else if (Input.GetKeyDown(KeyCode.F11) && !Screen.fullScreen)
-        {
-            Screen.fullScreenMode = FullScreenMode.Windowed;
+            Screen.fullScreen = !Screen.fullScreen;
         }
 
 
