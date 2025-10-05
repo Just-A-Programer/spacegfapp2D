@@ -93,6 +93,8 @@ public class draw : MonoBehaviour
 
 
         new_mod.transform.position = new Vector3(new_pos.x, new_pos.y, 0);
+
+        SSMS.ModuleAmount[drawID]++;
     }
 
     public void SetDrawID(int ID)

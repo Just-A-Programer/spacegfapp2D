@@ -17,7 +17,6 @@ MonoBehaviour:
   TotalMaxMass: 66000
   TotalBuildTime: 300
   TotalMorale: 5.13
-  TotalChanceOFSucsess: 76.3
   TotalBudget: 69695959
   TotalCost: 20332
   ModuleName:
@@ -85,20 +84,21 @@ MonoBehaviour:
   ModulePrefab:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 4456794645715309869, guid: d3049ddc2ce09b448b99369901450c49, type: 3}
+  - {fileID: 1043518425050261576, guid: fe1e41921f247324dbf560be2fc8881f, type: 3}
+  - {fileID: 8736349748104889985, guid: e8ae7a3f566cb554693971e9c0ff0491, type: 3}
+  - {fileID: 1117417240225824340, guid: 5fae1b5a7d241b14a8d6a515d253297e, type: 3}
+  - {fileID: 7618385755817440237, guid: 4df31b649fdd6ca438f90a2e7295b372, type: 3}
+  - {fileID: 9002040434395079840, guid: 4d3ca7b659207af41a4d2c142a88d1cf, type: 3}
+  - {fileID: 0}
+  - {fileID: 5104470802917596332, guid: 0eb3cb515773185479dcbf95e9411dc1, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 4243759147869584611, guid: 02b15e1ee4d29f2459fb0bc2eb3d7c40, type: 3}
+  - {fileID: 8494399811445268591, guid: 6fb3a7d66ce6e1047b0d8bd3cecce404, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  ModuleAmount: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000039000000000000000000000000000000000000000000000000000000

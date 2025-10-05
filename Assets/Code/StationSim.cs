@@ -11,7 +11,6 @@ public class StationSim : MonoBehaviour
     int cost;
     int mass;
     float morale;
-    float COS;
 
     // Update is called once per frame
     void Update()
@@ -20,7 +19,6 @@ public class StationSim : MonoBehaviour
         cost = SSMS.TotalCost;
         mass = SSMS.TotalMass;
         morale = SSMS.TotalMorale;
-        //COS = SSMS.TotalChanceOFSucsess;
 
         //budget
         stats[0].text = budget + " / " + cost;
@@ -36,10 +34,6 @@ public class StationSim : MonoBehaviour
         //Morale
         stats[2].text = morale + "%";
         stats[2].color = new Color(1 - Mathf.Lerp(0, 1, ((float)morale / (float)100f)), Mathf.Lerp(0, 1, ((float)morale / (float)100f)), 0);
-
-        /*//COS
-        stats[3].text = COS + "%";
-        stats[3].color = new Color(1 - Mathf.Lerp(0, 1, ((float)COS / (float)100f)), Mathf.Lerp(0, 1, ((float)COS / (float)100f)), 0);*/
 
         
     }
