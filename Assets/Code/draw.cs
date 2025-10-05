@@ -16,9 +16,12 @@ public class draw : MonoBehaviour
     Vector2[] takenSpace1 = new Vector2[45];
     Vector2[] takenSpace2 = new Vector2[45];
     int[] takenIndex = new int[3];
+    int[] onlywallID = new int[1];
 
     private void Start()
     {
+        onlywallID[0] = 5;
+        
         SS_prefabs = SSMS.ModulePrefab;
         
         drawID = -1;
@@ -57,6 +60,14 @@ public class draw : MonoBehaviour
             return;
         if (new_pos.y == 3 && (new_pos.x == -3 || new_pos.x == 3))
             return;
+
+        if (drawID == onlywallID[0])
+        {
+            if (((new_pos.x > -3 && new_pos.x < 3) && (new_pos.y > -3 && new_pos.y < 3)))
+                return;
+        }
+
+
 
         if (currFloor == 0) {
             for (int i = 0; i < takenSpace0.Length; i++)
