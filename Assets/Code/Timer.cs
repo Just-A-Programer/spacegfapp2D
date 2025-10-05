@@ -95,18 +95,18 @@ public class Timer : MonoBehaviour
         else if (debug_Scenerio == 1) { ENDSCREENIMG.sprite = endscreenimg[1]; ENDSCREENANIM.Play("lose_short", 0); }
 
         end = true;
-        StartCoroutine(endcount(score));
+        StartCoroutine(endcount(debug_Scenerio));
     }
 
     IEnumerator endcount(float score)
     {
-        if (score >= 0.85)
+        if (debug_Scenerio == 4)
             yield return new WaitForSeconds(14.5f);
-        else if (score >= 0.50 && score < 0.85)
+        else if (debug_Scenerio == 3)
             yield return new WaitForSeconds(13);
-        else if (score >= 0.25 && score < 0.50)
+        else if (debug_Scenerio == 2)
             yield return new WaitForSeconds(10);
-        else if (score < 0.25)
+        else if (debug_Scenerio == 1)
             yield return new WaitForSeconds(7);
 
         yield return new WaitForSeconds(1);
