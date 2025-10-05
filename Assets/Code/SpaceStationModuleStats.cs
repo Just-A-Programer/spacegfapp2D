@@ -6,6 +6,7 @@ using UnityEngine;
 public class SpaceStationModuleStats : ScriptableObject
 {
     public int NumberOfModules;
+    public int TotalModuleSum;
     public int TotalMass;
     public int TotalMaxMass;
     public float TotalBuildTime;
