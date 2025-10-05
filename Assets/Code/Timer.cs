@@ -1,15 +1,27 @@
+using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
+//using UnityEngine.UIElements;
 
 public class Timer : MonoBehaviour
 {
+    public GameObject ENDMASTERTEXT;
+    public TextMeshProUGUI BIG_TEXT;
+    public TextMeshProUGUI Resontext;
+    public string[] Resons = new string[3];
     public GameObject ENDSCREEN;
+    public Image ENDSCREENIMG;
     public Animator ENDSCREENANIM;
     public TextMeshProUGUI timertext;
     public SpaceStationModuleStats SSMS;
+    public Sprite[] endscreenimg;
     float timer;
-    public float debug;
+    public float debug_Scenerio;
+
+    public bool end;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,7 +34,8 @@ public class Timer : MonoBehaviour
         if (timer > 0) { timer -= Time.deltaTime; }
         if (timer < 0) { timer = 0; }
 
-        if (timer == 0) { WorldsEnd(); }
+        if (timer == 0 && !end) { WorldsEnd(); }
+        if (Input.GetKeyDown(KeyCode.Mouse0) && end)
 
         if (Mathf.Floor(timer / 60) != 0)
             timertext.text = Mathf.Floor(timer / 60) + "m. " + Mathf.Ceil(timer % 60) + "s.";
@@ -33,9 +46,23 @@ public class Timer : MonoBehaviour
         else if (timer <= 0.5 * SSMS.TotalBuildTime && timer >= 0.1 * SSMS.TotalBuildTime) { timertext.color = new Color(1, 1, 0); }
         else { timertext.color = new Color(1, 0, 0); }
     }
+    public void restart()
+    {
+        end = false;
+
+        StopAllCoroutines();
+        ENDSCREEN.SetActive(false);
+
+        timer = SSMS.TotalBuildTime;
+    }
+
 
     public void WorldsEnd()
     {
+        
+        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+        UnityEngine.Cursor.visible = false;
+
         //game stats
         float budget    = SSMS.TotalCost;
         float maxbudget = SSMS.TotalBudget;
@@ -45,13 +72,57 @@ public class Timer : MonoBehaviour
         
         float score = morale * (budget / maxbudget) * Mathf.Pow(mass / maxmass, -1);
 
-        score = debug;
+        score = debug_Scenerio;
 
         ENDSCREEN.SetActive(true);
 
-        if (score >= 0.85) { ENDSCREENANIM.Play("win", 0); }
-        else if (score >= 0.50 && score < 0.85) { ENDSCREENANIM.Play("lose_long", 0); }
-        else if (score >= 0.25 && score < 0.50) { ENDSCREENANIM.Play("lose_medium", 0); }
-        else if (score < 0.25) { ENDSCREENANIM.Play("lose_short", 0); }
+        
+
+        if (debug_Scenerio == 4) { ENDSCREENIMG.sprite = endscreenimg[0]; ENDSCREENANIM.Play("win", 0); }
+        else if (debug_Scenerio == 3) { ENDSCREENIMG.sprite = endscreenimg[3]; ENDSCREENANIM.Play("lose_long", 0); }
+        else if (debug_Scenerio == 2) { ENDSCREENIMG.sprite = endscreenimg[2]; ENDSCREENANIM.Play("lose_medium", 0); }
+        else if (debug_Scenerio == 1) { ENDSCREENIMG.sprite = endscreenimg[1]; ENDSCREENANIM.Play("lose_short", 0); }
+
+        end = true;
+        StartCoroutine(endcount(score));
+    }
+
+    IEnumerator endcount(float score)
+    {
+        if (score >= 0.85)
+            yield return new WaitForSeconds(14.5f);
+        else if (score >= 0.50 && score < 0.85)
+            yield return new WaitForSeconds(13);
+        else if (score >= 0.25 && score < 0.50)
+            yield return new WaitForSeconds(10);
+        else if (score < 0.25)
+            yield return new WaitForSeconds(7);
+
+        yield return new WaitForSeconds(1);
+        end2();
+    }
+
+    public void end2()
+    {
+        ENDMASTERTEXT.SetActive(true);
+        if (debug_Scenerio == 4) BIG_TEXT.text = "YOU HAVE WON";
+        else BIG_TEXT.text = "YOU BLEW UP";
+
+        if (debug_Scenerio == 1)
+        {
+            Resontext.text = Resons[0];
+        }
+        else if (debug_Scenerio == 2)
+        {
+            Resontext.text = Resons[0];
+        }
+        else if (debug_Scenerio == 3)
+        {
+            Resontext.text = Resons[0];
+        }
+        else if (debug_Scenerio == 4)
+        {
+            Resontext.text = "";
+        }
     }
 }

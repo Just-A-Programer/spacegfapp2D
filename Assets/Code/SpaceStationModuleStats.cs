@@ -8,6 +8,7 @@ public class SpaceStationModuleStats : ScriptableObject
     public int NumberOfModules;
     public int TotalCrew;
     public int TotalModuleSum;
+    public int TotalDryMass;
     public int TotalMass;
     public int TotalMaxMass;
     public float TotalBuildTime;

@@ -48,19 +48,19 @@ public class StationSim : MonoBehaviour
         stats[1].color = new Color(Mathf.Lerp(0, 1, ((float)mass / (float)SSMS.TotalMaxMass)), 1 - Mathf.Lerp(0, 1, ((float)mass / (float)SSMS.TotalMaxMass)), 0); 
         if (mass >= SSMS.TotalMaxMass) { stats[1].color = new Color(0.5f, 0, 0); }
 
-        //Morale
+        /*//Morale
         stats[2].text = Mathf.Round(morale * 10000)/100 + "%";
-        stats[2].color = new Color(1 - Mathf.Lerp(0, 1, ((float)morale)), Mathf.Lerp(0, 1, ((float)morale)), 0);
+        stats[2].color = new Color(1 - Mathf.Lerp(0, 1, ((float)morale)), Mathf.Lerp(0, 1, ((float)morale)), 0);*/
 
         //crew
-        stats[3].text = SSMS.TotalCrew + " / " + SSMS.ModuleAmount[18];
-        if(SSMS.TotalCrew > SSMS.ModuleAmount[18]) stats[3].color = new Color(1, 0, 0);
-        else stats[3].color = new Color(0, 1, 0);
+        stats[2].text = SSMS.TotalCrew + " / " + SSMS.ModuleAmount[18];
+        if(SSMS.TotalCrew > SSMS.ModuleAmount[18]) stats[2].color = new Color(1, 0, 0);
+        else stats[2].color = new Color(0, 1, 0);
 
         //=== STATS ===
 
         //mass
-        SSMS.TotalMass = 0;
+        SSMS.TotalMass = SSMS.TotalDryMass;
         for (int i = 0; i < SSMS.NumberOfModules; i++)
         {
             SSMS.TotalMass += SSMS.ModuleMass[i] * SSMS.ModuleAmount[i];
