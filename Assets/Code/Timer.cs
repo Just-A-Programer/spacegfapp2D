@@ -10,8 +10,7 @@ public class Timer : MonoBehaviour
 {
     public GameObject ENDMASTERTEXT;
     public TextMeshProUGUI BIG_TEXT;
-    public TextMeshProUGUI Resontext;
-    public string[] Resons = new string[3];
+    public GameObject[] Resontext = new GameObject[4];
     public GameObject ENDSCREEN;
     public Image ENDSCREENIMG;
     public Animator ENDSCREENANIM;
@@ -36,6 +35,7 @@ public class Timer : MonoBehaviour
 
         if (timer == 0 && !end) { WorldsEnd(); }
         if (Input.GetKeyDown(KeyCode.Mouse0) && end)
+            restart();
 
         if (Mathf.Floor(timer / 60) != 0)
             timertext.text = Mathf.Floor(timer / 60) + "m. " + Mathf.Ceil(timer % 60) + "s.";
@@ -52,8 +52,17 @@ public class Timer : MonoBehaviour
 
         StopAllCoroutines();
         ENDSCREEN.SetActive(false);
+        ENDMASTERTEXT.SetActive(false);
 
         timer = SSMS.TotalBuildTime;
+
+        UnityEngine.Cursor.lockState = CursorLockMode.None;
+        UnityEngine.Cursor.visible = true;
+
+        Resontext[0].SetActive(false);
+        Resontext[1].SetActive(false);
+        Resontext[2].SetActive(false);
+        Resontext[3].SetActive(false);
     }
 
 
@@ -110,19 +119,32 @@ public class Timer : MonoBehaviour
 
         if (debug_Scenerio == 1)
         {
-            Resontext.text = Resons[0];
+            Resontext[0].SetActive(true);
+            Resontext[1].SetActive(false);
+            Resontext[2].SetActive(false);
+            Resontext[3].SetActive(false);
+
         }
         else if (debug_Scenerio == 2)
         {
-            Resontext.text = Resons[0];
+            Resontext[0].SetActive(false);
+            Resontext[1].SetActive(true);
+            Resontext[2].SetActive(false);
+            Resontext[3].SetActive(false);
         }
         else if (debug_Scenerio == 3)
         {
-            Resontext.text = Resons[0];
+            Resontext[0].SetActive(false);
+            Resontext[1].SetActive(false);
+            Resontext[2].SetActive(true);
+            Resontext[3].SetActive(false);
         }
         else if (debug_Scenerio == 4)
         {
-            Resontext.text = "";
+            Resontext[0].SetActive(false);
+            Resontext[1].SetActive(false);
+            Resontext[2].SetActive(false);
+            Resontext[3].SetActive(true);
         }
     }
 }
