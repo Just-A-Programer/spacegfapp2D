@@ -65,18 +65,18 @@ MonoBehaviour:
   ModuleSprite:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 4993324255442523641, guid: 69d71d3f60342604bae35cec9714093c, type: 3}
+  - {fileID: -3875698856990056725, guid: ad13007afcb6eca499b47a2e8c57de54, type: 3}
+  - {fileID: -4692164713578681978, guid: 170076f0bf5b8b14eaca502686f5c123, type: 3}
+  - {fileID: -436780474722562603, guid: 512e1c7dcb1da554da64a697bece0d46, type: 3}
+  - {fileID: -7730193349463595333, guid: 4745573330ba5b340812791233a34eeb, type: 3}
+  - {fileID: -4653105354952314045, guid: 82e56dade0f591b4da4d7ac88dedb6f0, type: 3}
+  - {fileID: 0}
+  - {fileID: -8243884347342347663, guid: bc4c7a8ba88cccd4bbbe6b888de1117a, type: 3}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8607107982698321341, guid: 2048c1f113bb0f14c82749b552ac18c5, type: 3}
+  - {fileID: 4204559362532106452, guid: 9e5a1f32bf12fc847abe1fd082b30d05, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
