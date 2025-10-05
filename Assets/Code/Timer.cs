@@ -49,6 +49,8 @@ public class Timer : MonoBehaviour
     public void restart()
     {
         end = false;
+        if (debug_Scenerio != 4)
+            debug_Scenerio++;
 
         StopAllCoroutines();
         ENDSCREEN.SetActive(false);
