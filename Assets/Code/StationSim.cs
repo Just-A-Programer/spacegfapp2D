@@ -38,18 +38,18 @@ public class StationSim : MonoBehaviour
 
         //=== Sighs ===
         //budget
-        stats[0].text = budget + " / " + cost;
+        stats[0].text = budget + " / " + cost + "  " + Mathf.Round((float)cost/(float)budget * 1000) / 100 + "%";
         if (budget > cost)  { stats[0].color = new Color(0,1,0); }
         if (budget == cost) { stats[0].color = new Color(1,1,0); }
         if (budget < cost)  { stats[0].color = new Color(1,0,0); }
 
         //mass
-        stats[1].text = SSMS.TotalMaxMass + " kg / " + mass + " kg";
+        stats[1].text = SSMS.TotalMaxMass + " kg / " + mass + " kg" + "  " + Mathf.Round((float)mass / (float)SSMS.TotalMaxMass * 10000) / 100 + "%";
         stats[1].color = new Color(Mathf.Lerp(0, 1, ((float)mass / (float)SSMS.TotalMaxMass)), 1 - Mathf.Lerp(0, 1, ((float)mass / (float)SSMS.TotalMaxMass)), 0); 
         if (mass >= SSMS.TotalMaxMass) { stats[1].color = new Color(0.5f, 0, 0); }
 
         //Morale
-        stats[2].text = (morale * 100) + "%";
+        stats[2].text = Mathf.Round(morale * 10000)/100 + "%";
         stats[2].color = new Color(1 - Mathf.Lerp(0, 1, ((float)morale)), Mathf.Lerp(0, 1, ((float)morale)), 0);
 
         //=== STATS ===
@@ -76,7 +76,6 @@ public class StationSim : MonoBehaviour
             if (SSMS.ModuleAmount[i] != 0)
                 moralesum += 1 - 1 / ((float)SSMS.ModuleMorale[i] * (float)SSMS.ModuleAmount[i]);
         }
-        Debug.Log(moralesum);
         if (SSMS.TotalModuleSum != 0)
             SSMS.TotalMorale = moralesum;
         else
